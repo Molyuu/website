@@ -79,6 +79,6 @@ highlight_name: true
 - {{% icon name=mobile-phone padding_right=4 %}} Android maintainer.
 - {{% icon name=rocket padding_right=4 %}} GitHub active code contributor.
 - {{% icon name=linux pack=fab padding_right=4 %}} Linux fan. BTW I Use Arch.
-- {{% icon name=key padding_right=4 %}} GPG Public Key: [`3968 575F`](https://keys.openpgp.org/search?q=mi%@molyuu.cyou).
+- {{% icon name=key padding_right=4 %}} GPG Public Key: [`3968 575F 6BC0 B69B`](https://keys.openpgp.org/search?q=3968575F6BC0B69BEA6DE6CA87EDB0B29A830179).
 
 </div>
