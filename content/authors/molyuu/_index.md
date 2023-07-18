@@ -7,7 +7,7 @@ superuser: true
 
 # Role/position/tagline
 role: |-
-  Linuxer | Android maintainer | Life tourist
+  Linuxer | Android Maintainer | Pro Noob
 
 # Organizations/Affiliations to show in About widget
 organizations:
