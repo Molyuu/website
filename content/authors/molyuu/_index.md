@@ -51,7 +51,7 @@ social:
   - icon: github
     icon_pack: fab
     link: https://github.com/Molyuu
-    label: Github
+    label: GitHub
     display:
       header: true
   - icon: envelope 
