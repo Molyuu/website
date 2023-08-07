@@ -1,12 +1,130 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <title> Molyuu's Redirect Page </title>
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-  </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Molyuu's Redirect Page</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 2px solid #8e44ad;
+            /* Replace with the function below */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            color: #8e44ad;
+            /* Replace with the function below */
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #8e44ad;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #6c3483;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1> Molyuu's Redirect Page </h1>
+        <p>This is probably the most ugly stuff I could make.</p>
+        <p> </p>
+        <p>Find me</p>
+        <ul>
+            <a href="https://hub.winslow.cloud/@molyuu/" target="socialFrame">Mastodon</a>
+            <a href="https://github.com/Molyuu" target="socialFrame">GitHub</a>
+            <a href="mi@molyuu.cyou" target="socialFrame">E-Mail</a>
+        </ul>
+        <p>Visit my websites:</p>
+        <a href="https://molyuu.cyou/" target="websiteFrame">Homepage</a>
+        <a href="https://blog.molyuu.cyou/" target="websiteFrame">Blog</a>
+    </div>
+
+    <!-- Frames for social media and website links -->
+    <iframe src="about:blank" name="socialFrame" style="display: none;"></iframe>
+    <iframe src="about:blank" name="websiteFrame" style="display: none;"></iframe>
+
+    <script>
+        // Function to generate a random color in hexadecimal format
+        // I copy-pasted from StackOverFlow and it works, good.
+        function generateRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Set random color for the container border and h1 text when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.container');
+            const h1 = document.querySelector('h1');
+            container.style.borderColor = generateRandomColor();
+            h1.style.color = generateRandomColor();
+        });
+
+        // Update color for container border and h1 text every time the page is clicked
+        document.addEventListener('click', () => {
+            const container = document.querySelector('.container');
+            const h1 = document.querySelector('h1');
+            container.style.borderColor = generateRandomColor();
+            h1.style.color = generateRandomColor();
+        });
+
+        // Function to open links in the same frame with a delay
+        function openLinkWithDelay(url, target) {
+            setTimeout(() => {
+                window.open(url, target);
+            }, 3000);
+        }
+
+        // Add an event listener to all links to open them with a delay
+        const links = document.querySelectorAll("a");
+        links.forEach(link => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                const url = e.target.href;
+                const target = e.target.target;
+                openLinkWithDelay(url, target);
+            });
+        });
+
+        // Update background color for iframes every time they are refreshed
+        const socialFrame = document.querySelector("iframe[name='socialFrame']");
+        const websiteFrame = document.querySelector("iframe[name='websiteFrame']");
+        socialFrame.addEventListener("load", () => {
+            socialFrame.style.backgroundColor = generateRandomColor();
+        });
+        websiteFrame.addEventListener("load", () => {
+            websiteFrame.style.backgroundColor = generateRandomColor();
+        });
+    </script>
+</body>
+
 </html>
