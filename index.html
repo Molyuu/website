@@ -24,7 +24,7 @@
 
         h1 {
             text-align: center;
-            color: #8e44ad;
+            color: #55ad44;
             /* Replace with the function below */
         }
 
@@ -70,32 +70,30 @@
     <iframe src="about:blank" name="websiteFrame" style="display: none;"></iframe>
 
     <script>
-        // Function to generate a random color in hexadecimal format
-        // I copy-pasted from StackOverFlow and it works, good.
-        function generateRandomColor() {
-            const letters = '0123456789ABCDEF';
-            let color = '#';
-            for (let i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
+        // Function to make your designer friend happy one happy
+        function redGreenSwitcherMakesYourDesignerFriendHappy(time) {
+            if (time % 2 == 0) {
+                return "#ff0000"
+            } else {
+                return "#2bff00"
             }
-            return color;
         }
 
         // Set random color for the container border and h1 text when the page loads
         document.addEventListener('DOMContentLoaded', () => {
             const container = document.querySelector('.container');
             const h1 = document.querySelector('h1');
-            container.style.borderColor = generateRandomColor();
-            h1.style.color = generateRandomColor();
+            container.style.borderColor = redGreenSwitcherMakesYourDesignerFriendHappy(Date.now());
+            h1.style.color = redGreenSwitcherMakesYourDesignerFriendHappy(Date.now());
         });
 
-        // Update color for container border and h1 text every time the page is clicked
-        document.addEventListener('click', () => {
+        // Update color for container border and h1 text every second
+        setInterval(() => {
             const container = document.querySelector('.container');
             const h1 = document.querySelector('h1');
-            container.style.borderColor = generateRandomColor();
-            h1.style.color = generateRandomColor();
-        });
+            container.style.borderColor = redGreenSwitcherMakesYourDesignerFriendHappy(Date.now());
+            h1.style.color = redGreenSwitcherMakesYourDesignerFriendHappy(Date.now());
+        }, 100);
 
         // Function to open links in the same frame with a delay
         function openLinkWithDelay(url, target) {
@@ -115,15 +113,13 @@
             });
         });
 
-        // Update background color for iframes every time they are refreshed
+        // Update background color for iframes every second
         const socialFrame = document.querySelector("iframe[name='socialFrame']");
         const websiteFrame = document.querySelector("iframe[name='websiteFrame']");
-        socialFrame.addEventListener("load", () => {
-            socialFrame.style.backgroundColor = generateRandomColor();
-        });
-        websiteFrame.addEventListener("load", () => {
-            websiteFrame.style.backgroundColor = generateRandomColor();
-        });
+        setInterval(() => {
+            socialFrame.style.backgroundColor = redGreenSwitcherMakesYourDesignerFriendHappy();
+            websiteFrame.style.backgroundColor = redGreenSwitcherMakesYourDesignerFriendHappy();
+        }, 100);   
     </script>
 </body>
 
