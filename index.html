@@ -56,13 +56,13 @@
         <p> </p>
         <p>Find me</p>
         <ul>
-            <a href="https://hub.winslow.cloud/@molyuu/" target="socialFrame">Mastodon</a>
-            <a href="https://github.com/Molyuu" target="socialFrame">GitHub</a>
-            <a href="mailto:mi@molyuu.cyou" target="socialFrame">E-Mail</a>
+            <a href="https://hub.winslow.cloud/@molyuu/" target="_blank">Mastodon</a>
+            <a href="https://github.com/Molyuu" target="_blank">GitHub</a>
+            <a href="mailto:mi@molyuu.cyou" target="_blank">E-Mail</a>
         </ul>
         <p>Visit my websites:</p>
-        <a href="https://molyuu.cyou/" target="websiteFrame">Homepage</a>
-        <a href="https://blog.molyuu.cyou/" target="websiteFrame">Blog</a>
+        <a href="https://molyuu.cyou/" target="_blank">Homepage</a>
+        <a href="https://blog.molyuu.cyou/" target="_blank">Blog</a>
     </div>
 
     <!-- Frames for social media and website links -->
@@ -94,24 +94,6 @@
             container.style.borderColor = redGreenSwitcherMakesYourDesignerFriendHappy(Date.now());
             h1.style.color = redGreenSwitcherMakesYourDesignerFriendHappy(Date.now());
         }, 100);
-
-        // Function to open links in the same frame with a delay
-        function openLinkWithDelay(url, target) {
-            setTimeout(() => {
-                window.open(url, target);
-            }, 3000);
-        }
-
-        // Add an event listener to all links to open them with a delay
-        const links = document.querySelectorAll("a");
-        links.forEach(link => {
-            link.addEventListener("click", (e) => {
-                e.preventDefault();
-                const url = e.target.href;
-                const target = e.target.target;
-                openLinkWithDelay(url, target);
-            });
-        });
 
         // Update background color for iframes every second
         const socialFrame = document.querySelector("iframe[name='socialFrame']");
