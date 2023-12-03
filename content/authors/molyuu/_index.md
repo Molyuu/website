@@ -7,7 +7,7 @@ superuser: true
 
 # Role/position/tagline
 role: |-
-  Linuxer | Android Maintainer | Pro Noob
+  OSS Dev | Linuxer | High Schooler
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -27,14 +27,14 @@ interests:
     <i class="fas fa-bed pr-2"></i>Sleeping
 
 # Education to show in About widget
-#education:
-#  courses:
-#   - course: M.S. in Computer Science
-#      year: 2023
-#      institution: East China Normal University
-#   - course: B.S. in Computer Science
-#      year: 2020
-#      institution: Shanghai University
+education:
+  courses:
+    - course: Master of RBQ
+      year: 2022
+      institution: RBQ University
+    - course: Bachelor of Lie Flat
+      year: 2022
+      institution: Home University
 
 
 # Social/Academic Networking
@@ -42,24 +42,22 @@ interests:
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "/#contact" for contact widget.
 social:
-  - icon: mastodon
-    icon_pack: fab
-    link: https://hub.winslow.cloud/molyuu
-    label: Mastodon
-    display:
-      header: true
   - icon: github
     icon_pack: fab
     link: https://github.com/Molyuu
     label: GitHub
     display:
       header: true
+
+  - icon: telegram 
+    icon_pack: fab
+    link: https://t.me/Molyuu_Official
+    label: Telegram
+    
   - icon: envelope 
     icon_pack: fas
     link: mailto:mi@molyuu.cyou
-  - icon: telegram 
-    icon_pack: fab
-    link: https://t.me/Molyuu2007
+    label: EMail
 
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
@@ -74,13 +72,12 @@ email: ''
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
+
 <div class="nobull">
 
 - {{% icon name=mobile-phone padding_right=4 %}} Android maintainer.
 - {{% icon name=rocket padding_right=4 %}} GitHub active code contributor.
 - {{% icon name=linux pack=fab padding_right=4 %}} Linux fan. BTW I Use Arch.
 - {{% icon name=key padding_right=4 %}} GPG Public Key: [`87ED B0B2 9A83 0179`](https://keys.openpgp.org/search?q=3968575F6BC0B69BEA6DE6CA87EDB0B29A830179).
-
-
 
 </div>
